@@ -42,6 +42,10 @@ class classmateDetailViewController: UIViewController {
         
         classmateName.text = passName
         println(passName)
+        println(firstCard.center)
+        println(secondCard.center)
+        println(thirdCard.center)
+        println(fourthCard.center)
 
         // Do any additional setup after loading the view.
     }

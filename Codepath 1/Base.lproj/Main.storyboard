@@ -36,20 +36,31 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W8k-iF-LzX">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Md0-dB-iiG">
+                                        <rect key="frame" x="0.0" y="67" width="320" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Classmates" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFe-is-tWO">
                                         <rect key="frame" x="115" y="32" width="90" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" image="close_grey_button" translatesAutoresizingMaskIntoConstraints="NO" id="HN1-U1-0sa">
+                                        <rect key="frame" x="25" y="35" width="16" height="16"/>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="W8k-iF-LzX" secondAttribute="height" multiplier="64:17" id="IRe-SR-YKV"/>
                                     <constraint firstAttribute="centerY" secondItem="EFe-is-tWO" secondAttribute="centerY" id="Iff-Ch-pgw"/>
+                                    <constraint firstItem="HN1-U1-0sa" firstAttribute="leading" secondItem="W8k-iF-LzX" secondAttribute="leading" constant="25" id="ZhL-b8-ohV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Md0-dB-iiG" secondAttribute="trailing" id="ccI-wZ-K69"/>
                                     <constraint firstAttribute="centerX" secondItem="EFe-is-tWO" secondAttribute="centerX" id="gaa-Rq-tOc"/>
+                                    <constraint firstItem="Md0-dB-iiG" firstAttribute="leading" secondItem="W8k-iF-LzX" secondAttribute="leading" id="hFv-2Y-E7W"/>
+                                    <constraint firstAttribute="bottom" secondItem="Md0-dB-iiG" secondAttribute="bottom" id="olX-Lc-yDX"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -62,6 +73,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="headerView" destination="W8k-iF-LzX" id="f9c-zK-rLn"/>
                         <outlet property="tableView" destination="Cxv-U9-6Zk" id="zXs-f7-K58"/>
                         <segue destination="BYZ-38-t0r" kind="modal" identifier="classmatesTable2DetailSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ahI-N2-YjU"/>
                     </connections>
@@ -90,14 +102,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfM-wO-v3F" userLabel="overlayBackground">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Classmates" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjR-OB-ltD">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Classmates" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjR-OB-ltD">
                                         <rect key="frame" x="115" y="30" width="90" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="a4T-TQ-buD">
-                                        <rect key="frame" x="25" y="30" width="21" height="21"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="a4T-TQ-buD">
+                                        <rect key="frame" x="25" y="32.5" width="16" height="16"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="giZ-0w-WsY" appends="YES" id="Ia4-a8-NeT"/>
@@ -105,6 +117,10 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="a4T-TQ-buD" firstAttribute="leading" secondItem="nfM-wO-v3F" secondAttribute="leading" constant="25" id="6XR-d7-qtF"/>
+                                    <constraint firstAttribute="centerX" secondItem="PjR-OB-ltD" secondAttribute="centerX" id="Xqc-Cz-552"/>
+                                </constraints>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ToN-5w-JYJ" userLabel="First Card View">
                                 <rect key="frame" x="42" y="98" width="236" height="370"/>
@@ -156,15 +172,15 @@
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lEk-fl-7Tv">
                                         <rect key="frame" x="0.0" y="154" width="236" height="1"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qod-dr-u0e">
                                         <rect key="frame" x="0.0" y="219" width="236" height="1"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ah6-eR-nT3">
                                         <rect key="frame" x="0.0" y="274" width="236" height="1"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="android_icon" translatesAutoresizingMaskIntoConstraints="NO" id="AIF-E4-6Kf">
                                         <rect key="frame" x="25" y="306" width="45" height="52"/>
@@ -337,6 +353,8 @@
                             <constraint firstItem="nfM-wO-v3F" firstAttribute="leading" secondItem="rAB-mF-SJG" secondAttribute="leadingMargin" constant="-16" id="gpq-Lr-MjE"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="achievementsLabel" destination="8qk-V3-WxQ" id="rDR-fe-RoO"/>
                         <outlet property="classmateJobTitle" destination="gye-3i-N9j" id="mKu-4k-h8F"/>
@@ -367,6 +385,7 @@
         <image name="Tom Lee" width="45" height="45"/>
         <image name="android_icon" width="60" height="70"/>
         <image name="close" width="25" height="24"/>
+        <image name="close_grey_button" width="25" height="25"/>
         <image name="ios_icon" width="60" height="70"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

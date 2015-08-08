@@ -11,6 +11,7 @@ import UIKit
 class ClassmatesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var headerView: UIView!
     
     weak var classmatesViewController: ClassmatesViewController!
     
@@ -22,6 +23,11 @@ class ClassmatesViewController: UIViewController, UITableViewDelegate, UITableVi
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+//        headerView.layer.masksToBounds = true
+//        headerView.layer.borderColor = UIColor.grayColor().CGColor;
+//        headerView.layer.borderWidth = 1.0
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,8 +53,8 @@ class ClassmatesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @IBAction func onTapCell(sender: UITapGestureRecognizer) {
-        showClassmateDetails()
-//        performSegueWithIdentifier("classmatesTable2DetailSegue", sender: nil)
+//        showClassmateDetails()
+        performSegueWithIdentifier("classmatesTable2DetailSegue", sender: nil)
         println(classMates[1])
 
     }
